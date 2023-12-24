@@ -74,9 +74,6 @@ export default function SideBar() {
           ></div>
           <div
             className="wrapper"
-            onClick={() => {
-              setSidebar(!sidebar);
-            }}
           >
             <Nav style={styleNavBar}></Nav>
           </div>

@@ -14,4 +14,18 @@ export const StyleGlobal = createGlobalStyle`
   section {
     margin-top: 2em;
   }
+  .light {
+    background-color: #fff !important;
+    color: #333 !important; 
+    a {
+      color: #333 !important; 
+    }
+  }
+  .dark {
+    color: #ccc !important;
+    background-color: rgb(25 25 25) !important;
+    a {
+      color: #ccc !important; 
+    }
+  }
 `;

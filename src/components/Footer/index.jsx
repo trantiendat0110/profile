@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { ThemeContext } from "../../contexts/ThemeContext";
 const FooterStyled = styled.footer`
   height: 100px;
   p {
@@ -17,10 +18,17 @@ const FooterStyled = styled.footer`
     }
   }
 `;
+const lightStyle = {
+  backgroundColor: "#000",
+};
 export default function Footer() {
+  const themeContext = useContext(ThemeContext);
+
   return (
     <FooterStyled>
-      <p>Cảm ơn đã ghé thăm trang web của tôi !</p>
+      <p style={!themeContext.theme ? lightStyle : null}>
+        Cảm ơn đã ghé thăm trang web của tôi !
+      </p>
     </FooterStyled>
   );
 }

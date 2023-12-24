@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { AiFillFacebook, AiFillGithub, AiFillMail } from "react-icons/ai";
+import { ThemeContext } from "../../contexts/ThemeContext";
 const ContactStyled = styled.section`
   text-align: center;
   padding: 5em 0;
@@ -9,12 +10,20 @@ const ContactStyled = styled.section`
     font-size: 3em;
     text-align: center;
   }
-  span {
+  a {
+    svg {
+      border-radius: 50%;
+      height: fit-content;
+      width: fit-content;
+      background-color: #fff;
+    }
     font-size: 3em;
-    margin:1em;
+    margin: 1em;
   }
   .icons-contact {
     margin-top: 5em;
+    display: flex;
+    justify-content: center;
   }
   .wrapper {
     margin: 2em auto;
@@ -27,7 +36,7 @@ const ContactStyled = styled.section`
       height: 20px;
       position: absolute;
       border-radius: 50%;
-      background-color: #333;
+      background-color: #cecece;
       left: 15%;
       transform-origin: 50%;
       animation: circle7124 0.5s alternate infinite ease;
@@ -108,6 +117,8 @@ const ContactStyled = styled.section`
   }
 `;
 export default function Contact() {
+  const themeContext = useContext(ThemeContext);
+
   return (
     <ContactStyled id="contact">
       <h2>Liên Hệ</h2>
@@ -121,15 +132,16 @@ export default function Contact() {
         <div className="shadow"></div>
       </div>
       <div className="icons-contact">
-        <span>
-          <AiFillFacebook color="#3578E5"></AiFillFacebook>
-        </span>
-        <span>
-          <AiFillGithub color="#333"></AiFillGithub>
-        </span>
-        <span>
-          <AiFillMail color="#9a0015"></AiFillMail>
-        </span>
+        <a href="https://www.facebook.com/Volyhucau11">
+          <AiFillFacebook
+            color={themeContext.theme ? "#003ba9" : "#0048ff"}
+          ></AiFillFacebook>
+        </a>
+        <a href="https://github.com/trantiendat0110">
+          <AiFillGithub
+            color={themeContext.theme ? "#333" : "#000"}
+          ></AiFillGithub>
+        </a>
       </div>
     </ContactStyled>
   );

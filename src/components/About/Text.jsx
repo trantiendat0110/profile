@@ -23,8 +23,8 @@ const TextStyled = styled.div`
     bottom: -50px;
     cursor: pointer;
     display: inline-block;
-    padding: 12px 24px;
     border: none;
+    padding: 12px 24px;
     border-radius: 2em;
     transition: all 0.2s ease-in;
     position: relative;
@@ -32,6 +32,11 @@ const TextStyled = styled.div`
     font-size: 19px;
     color: black;
     z-index: 1;
+    a {
+      padding: 12px 24px;
+      width: 100%;
+      text-decoration: none;
+    }
     &:before {
       content: "";
       position: absolute;
@@ -65,7 +70,9 @@ const TextStyled = styled.div`
     &:hover {
       color: #ffffff;
     }
-
+    &:hover a {
+      color: #ffffff !important;
+    }
     &:hover:before {
       top: -35%;
       background-color: #6c63ff;
@@ -89,6 +96,7 @@ const TextStyled = styled.div`
       font-size: 26px;
     }
     p {
+      padding: 0 2em;
       font-size: 14px;
     }
   }
@@ -110,7 +118,7 @@ export default function Text() {
         đấu để trở thành một cán bộ quản lý kỹ thuật giỏi trong những năm tới.{" "}
       </p>
       <button data-aos="fade-up" data-aos-duration="800">
-        DOWNLOAD CV
+        <a href="#contact">Liên hệ</a>
       </button>
     </TextStyled>
   );

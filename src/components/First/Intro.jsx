@@ -41,17 +41,21 @@ const IntroductionStyle = styled.div`
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
-  }
-
-  button:hover {
-    background-color: rgb(108 99 255);
-    box-shadow: 0px 15px 20px rgb(108 99 255 / 50%);
-    color: #fff;
-    transform: translateY(-7px);
-  }
-
-  button:active {
-    transform: translateY(-1px);
+    &:hover {
+      background-color: rgb(108 99 255);
+      box-shadow: 0px 15px 20px rgb(108 99 255 / 50%);
+      color: #fff !important;
+      transform: translateY(-7px);
+    }
+    &:hover > a {
+      color: #fff !important;
+    }
+    &:active {
+      transform: translateY(-1px);
+    }
+    a {
+      text-decoration: none;
+    }
   }
   .typewriter {
     width: 21.5ch;
@@ -112,7 +116,9 @@ export default function Intro() {
           </span>
         </div>
       </div>
-      <button>GET MY CV</button>
+      <button>
+        <a href="https://www.topcv.vn/p/tran-tien-dat-4414400">Xem cv</a>
+      </button>
     </IntroductionStyle>
   );
 }

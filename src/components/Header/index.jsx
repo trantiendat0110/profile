@@ -1,13 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Nav from "./Nav";
 import avatar from "../../assets/img/avatar.svg";
 import SideBar from "./SideBar";
-
+import { ThemeContext } from "../../contexts/ThemeContext";
 const HeaderStyle = styled.header`
   z-index: 1000;
-  box-shadow: 0 0 15px 1px #ececec;
-  background-color: #fff;
   height: 87px;
   position: fixed;
   display: flex;
@@ -56,8 +54,9 @@ const LogoHeader = styled.a`
   }
 `;
 export default function Header() {
-  return (
-    <HeaderStyle id="header">
+const themeContext = useContext(ThemeContext)
+return (
+    <HeaderStyle id="header" className={themeContext.theme ? 'light' : 'dark'}>
       <LogoHeader href="#first">
         <div className="logo-image">
           <img width={"65px"} src={avatar} alt="w" />
