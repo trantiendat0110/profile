@@ -13,7 +13,7 @@ const AboutStyled = styled.section`
 `;
 export default function AboutMe() {
   return (
-    <AboutStyled id="about">
+    <AboutStyled id="about hello">
       <Card></Card>
       <Text></Text>
     </AboutStyled>
