@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/trantiendat0110/profile/static/css/main.1c452b66.css",
+    "main.js": "/trantiendat0110/profile/static/js/main.dce1e556.js",
+    "static/js/522.e7b1b1c7.chunk.js": "/trantiendat0110/profile/static/js/522.e7b1b1c7.chunk.js",
+    "static/media/aboutme.svg": "/trantiendat0110/profile/static/media/aboutme.57b5b69d2d92e5410cb231152a03751c.svg",
+    "static/media/project.svg": "/trantiendat0110/profile/static/media/project.be3f471d21a244f9eeeee7ada43911d0.svg",
+    "static/media/skill-banner1.svg": "/trantiendat0110/profile/static/media/skill-banner1.9fd7b66e6bf0719fd139094772f53019.svg",
+    "static/media/skill-banner2.svg": "/trantiendat0110/profile/static/media/skill-banner2.5770a3103a2418a0396836ee9e318485.svg",
+    "static/media/my-img.svg": "/trantiendat0110/profile/static/media/my-img.ac3bb1381b42989f59ddecd544e0f506.svg",
+    "static/media/avatar.svg": "/trantiendat0110/profile/static/media/avatar.f6e9fbfb7ee0984f6aa33d165d360fea.svg",
+    "index.html": "/trantiendat0110/profile/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.1c452b66.css",
+    "static/js/main.dce1e556.js"
+  ]
+}
